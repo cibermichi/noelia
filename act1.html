@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Universidad Privada Domingo Savio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background-image: url('https://i.pinimg.com/736x/6a/83/ff/6a83ffba1f8f7380a2ddf4cf86ff9ab1.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "menu main"
+        "footer footer";
+      grid-template-columns: 20% 80%;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    header {
+      grid-area: header;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    aside {
+      grid-area: menu;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-right: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    aside h2 {
+      color: #ffb6c1;
+      text-align: center;
+    }
+
+    .boton {
+      display: block;
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 25px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .boton:hover {
+      background-color: #ff1493;
+      transform: scale(1.1);
+    }
+
+    main {
+      grid-area: main;
+      padding: 30px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .foto-personal {
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      margin-top: 15px;
+      transition: transform 0.3s;
+    }
+
+    .foto-personal:hover {
+      transform: scale(1.05);
+    }
+
+    .subtexto {
+      font-style: italic;
+      color: #f1f1f1;
+      margin-bottom: 20px;
+    }
+
+    .gif-divertido {
+      width: 400px;
+      border-radius: 15px;
+      margin-top: 25px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #000;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #ffb6c1;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    footer {
+      grid-area: footer;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    iframe {
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+
+    <header>
+      Mi Página Personal ✨
+    </header>
+
+    <aside>
+      <h2>Secciones</h2>
+      <a href="#sobre-mi" class="boton">Sobre mí</a>
+      <a href="#hobbies" class="boton">Mis Hobbies</a>
+      <a href="#video" class="boton">Video Favorito</a>
+     
+
+      <br><br>
+      <h2>Redes</h2>
+      <a href="https://www.instagram.com/michicibernetico" target="_blank" class="boton">Instagram</a>
+      <a href="https://www.linkedin.com/in/noelia-garcia-cajareico-158324333" target="_blank" class="boton">LinkedIn</a>
+      <a href="mailto:noelitagarciac@gmail.com" class="boton">Correo</a>
+    </aside>
+
+    <main>
+      <section id="sobre-mi">
+        <p>Hola, soy <strong>Noelia García 💕</strong></p>
+        <img src="imagenes/yo.jpg" class="foto-personal" alt="Foto personal">
+        <p class="subtexto">Soy estudiante de Ingeniería en Sistemas en la Universidad Privada Domingo Savio. Me apasiona la tecnología, el arte y aprender cosas nuevas.</p>
+      </section>
+
+      <section id="video">
+        <img src="https://i.pinimg.com/originals/fd/30/84/fd30846b19ff684f079d23b217a481e8.gif" class="gif-divertido" alt="Gif divertido"> <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sD14kHZMocc?si=POUH9gdEx9mcEaaZ" title="Video favorito"></iframe>
+        <p class="subtexto">Un video que me gusta mucho</p>
+      </section>
+
+      <section id="hobbies">
+        <h2>Mis Hobbies 🎨</h2>
+        <table>
+          <tr>
+            <th>Actividad</th>
+            <th>Por qué me gusta</th>
+            <th>Frecuencia</th>
+          </tr>
+          <tr>
+            <td>Leer libros</td>
+            <td>Porque me hacen imaginar mundos nuevos</td>
+            <td>Todas las noches</td>
+          </tr>
+          <tr>
+            <td>Dibujar</td>
+            <td>Es mi forma favorita de expresarme</td>
+            <td>Varias veces por semana</td>
+          </tr>
+          <tr>
+            <td>Escuchar música</td>
+            <td>Me inspira y me relaja</td>
+            <td>Todos los días</td>
+          </tr>
+          <tr>
+            <td>Practicar inglés</td>
+            <td>Quiero viajar y comunicarme mejor 🌎</td>
+            <td>Casi todos los días</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="musica">
+        <audio controls>
+          <source src="adios.mp3" type="audio/mpeg">
+          Tu navegador no soporta el audio.
+        </audio>
+        <p class="subtexto">Audio de agradecimiento 🎶</p>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Universidad Privada Domingo Savio | Diseñado por Noelia 💻
+    </footer>
+
+  </div>
+</body>
+</html>
+
+
+
+
